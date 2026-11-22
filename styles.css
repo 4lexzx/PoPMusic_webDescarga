@@ -363,6 +363,19 @@
   .feature-master .feature-list{padding:8px 12px 12px}
 }
 
+/* PC: sin acordeón, todas las funciones visibles como antes */
+@media(min-width:561px){
+  .feature-master{border:0;background:none;border-radius:0;overflow:visible}
+  .feature-master-head{display:none}
+  .feature-master-body{max-height:none;opacity:1;overflow:visible}
+  .feature-master .feature-list{padding:0;border-top:1px solid #292929}
+  .feature-item{border:0;border-bottom:1px solid #292929;background:none;border-radius:0;overflow:visible}
+  .feature-head{cursor:default;pointer-events:none}
+  .feature-toggle{display:none}
+  .feature-body{max-height:none;opacity:1;overflow:visible}
+  .feature-body-inner{padding:0 0 24px 166px}
+}
+
 @media(max-width:360px){
   .hero-art{height:305px}
   .hero-art .phone-shot{width:114px;height:234px;margin:-117px 0 0 -57px}
