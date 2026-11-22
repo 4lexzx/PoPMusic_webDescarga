@@ -305,7 +305,7 @@
 .feature-item.open .feature-toggle::before{content:"−"}
 .feature-body{max-height:0;overflow:hidden;opacity:0;transition:max-height .45s cubic-bezier(.22,.61,.36,1),opacity .35s ease}
 .feature-item.open .feature-body{max-height:260px;opacity:1}
-.feature-body-inner{display:grid;grid-template-columns:1fr 58px;gap:28px;align-items:center;padding:0 0 24px 166px}
+.feature-body-inner{display:grid;grid-template-columns:1fr;gap:0;align-items:center;padding:0 0 24px 166px}
 .feature-body-inner p{margin:0;font-size:12.5px;line-height:1.8;color:#a4a4aa;max-width:560px}
 .feature-item:hover .feature-head .feature-icon{border-color:#8ce2e966}
 @media(max-width:560px){
@@ -317,9 +317,8 @@
   .feature-icon{width:32px;height:32px;font-size:14px}
   .feature-title{font-size:12.5px;line-height:1.35}
   .feature-toggle{width:22px;height:22px;font-size:14px}
-  .feature-body-inner{grid-template-columns:1fr 40px;gap:12px;padding:0 0 16px}
+  .feature-body-inner{grid-template-columns:1fr;gap:0;padding:0 0 16px}
   .feature-body-inner p{font-size:11px;line-height:1.6}
-  .feature-shot{width:38px;height:76px;border-radius:7px}
 }
 
 /* footer prolijo en móvil */
