@@ -337,6 +337,11 @@
   .footer-bottom{margin-top:10px;gap:12px}
 }
 
+/* nota de verificación de la APK */
+.checksum{margin:20px auto 0 !important;max-width:640px;font-size:10.5px;line-height:1.8;color:#7f838c;word-break:break-word}
+.checksum code{color:#8ce2e9;font-family:Consolas,Monaco,monospace;font-size:10px;background:#8ce2e90d;padding:3px 6px;border-radius:4px}
+@media(max-width:560px){.checksum code{font-size:9px}}
+
 /* crédito del creador */
 .creator-credit{margin-top:10px !important;font-size:10px;color:#777b84}
 .creator-credit a{color:#8ce2e9;font-weight:600}
