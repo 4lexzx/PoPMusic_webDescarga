@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"><i></i></div>
@@ -74,15 +74,12 @@
 
     <!-- ============ ABOUT ============ -->
     <section class="intro-band" id="about">
-      <div class="about-side">
-        <div class="intro-label section-topline">01 / CONOCE POPMUSIC</div>
-        <div class="about-logo-frame reveal">
-          <img class="about-logo" src="assets/popmusic-logo-original.png" alt="Logo oficial de PoPMusic" width="2048" height="2048">
-          <span>DISEÑADO PARA ESCUCHAR</span>
-        </div>
-      </div>
+      <div class="intro-label section-topline">01 / CONOCE POPMUSIC</div>
       <div class="intro-content reveal">
-        <h2>Todo empieza<br>con la música.</h2>
+        <div class="about-heading">
+          <img class="about-logo" src="assets/popmusic-logo-original.png" alt="Logo oficial de PoPMusic" width="2048" height="2048">
+          <h2>Todo empieza<br>con la música.</h2>
+        </div>
         <div class="intro-text">
           <p>PoPMusic es nuestro proyecto de música para Android: una app hecha con Kotlin y Jetpack Compose, pensada para gente que solo quiere abrir y escuchar. Sin anuncios, sin rastreo y sin cuentas obligatorias: tu biblioteca vive en tu teléfono.</p>
           <ul class="intro-points">
@@ -174,23 +171,52 @@
         <p>Todo lo que hace especial a PoPMusic, disponible desde la primera vez que la abres.</p>
       </div>
       <div class="feature-list">
-        <article class="feature-row reveal"><span class="feature-number">01</span><div class="feature-icon">♫</div><div><h3>Streaming sin anuncios</h3><p>Reproducción directa con Media3 y el extractor de NewPipe: sin interrupciones y con cola completa, aleatorio y crossfade.</p></div><div class="feature-shot"><img src="assets/screenshots/04-reproductor.png" alt="Reproductor de PoPMusic" loading="lazy"></div><span class="feature-arrow">↗</span></article>
-        <article class="feature-row reveal" data-delay="50"><span class="feature-number">02</span><div class="feature-icon">文</div><div><h3>Letras sincronizadas</h3><p>Letras en tiempo real con la línea activa resaltada, cuatro estilos de letra y la ficha del artista al alcance.</p></div><div class="feature-shot"><img src="assets/screenshots/05-letras.png" alt="Letras sincronizadas" loading="lazy"></div><span class="feature-arrow">↗</span></article>
-        <article class="feature-row reveal" data-delay="100"><span class="feature-number">03</span><div class="feature-icon">↓</div><div><h3>Descargas offline</h3><p>Descarga tus canciones y escúchalas sin datos: funciona en modo avión y se administra desde Ajustes.</p></div><div class="feature-shot"><img src="assets/screenshots/08-descargas.png" alt="Descargas de PoPMusic" loading="lazy"></div><span class="feature-arrow">↗</span></article>
-        <article class="feature-row reveal" data-delay="150"><span class="feature-number">04</span><div class="feature-icon">◎</div><div><h3>Salas “Todos controlan”</h3><p>Crea una sala, comparte el código y cualquiera puede pausar, saltar o añadir canciones a la cola compartida.</p></div><div class="feature-shot"><img src="assets/screenshots/06-salas.png" alt="Salas de PoPMusic" loading="lazy"></div><span class="feature-arrow">↗</span></article>
-        <article class="feature-row reveal" data-delay="200"><span class="feature-number">05</span><div class="feature-icon">↗</div><div><h3>Tendencias del mundo</h3><p>Top 50 mundial y de tu país al día, más reconocimiento de música y chips de ánimo para descubrir.</p></div><div class="feature-shot"><img src="assets/screenshots/02-buscar.png" alt="Buscar y tendencias" loading="lazy"></div><span class="feature-arrow">↗</span></article>
-        <article class="feature-row reveal" data-delay="250"><span class="feature-number">06</span><div class="feature-icon">✦</div><div><h3>A tu manera</h3><p>Fondos dinámicos con los colores de la portada, cristal líquido, crossfade, ecualizador y temporizador de sueño.</p></div><div class="feature-shot"><img src="assets/screenshots/07-ajustes.png" alt="Ajustes de PoPMusic" loading="lazy"></div><span class="feature-arrow">↗</span></article>
-        <article class="feature-row reveal" data-delay="300"><span class="feature-number">07</span><div class="feature-icon">＋</div><div><h3>Importa tus playlists</h3><p>Pega un enlace de YouTube o Spotify y trae tus listas completas a tu biblioteca en segundos.</p></div><div class="feature-shot"><img src="assets/screenshots/09-importar.png" alt="Importar playlists" loading="lazy"></div><span class="feature-arrow">↗</span></article>
-        <article class="feature-row reveal" data-delay="350"><span class="feature-number">08</span><div class="feature-icon">⇄</div><div><h3>Sincroniza tus cuentas</h3><p>Vincula YouTube o Spotify: importa playlists, sube tus listas y elige qué se sincroniza en cada una.</p></div><div class="feature-shot"><img src="assets/screenshots/10-sincronizacion.png" alt="Sincronización con cuentas" loading="lazy"></div><span class="feature-arrow">↗</span></article>
-        <article class="feature-row reveal" data-delay="400"><span class="feature-number">09</span><div class="feature-icon">♡</div><div><h3>Gustos y recomendaciones</h3><p>Elige tus géneros y artistas favoritos para que el inicio y las sugerencias se adapten a ti.</p></div><div class="feature-shot"><img src="assets/screenshots/12-gustos.png" alt="Gustos musicales" loading="lazy"></div><span class="feature-arrow">↗</span></article>
-        <article class="feature-row reveal" data-delay="450"><span class="feature-number">10</span><div class="feature-icon">☺</div><div><h3>Tu perfil y estadísticas</h3><p>Inicia sesión con Google y consulta tus playlists, favoritos, descargas y actividad desde tu cuenta.</p></div><div class="feature-shot"><img src="assets/screenshots/11-cuenta.png" alt="Cuenta de PoPMusic" loading="lazy"></div><span class="feature-arrow">↗</span></article>
+        <article class="feature-item open reveal">
+          <button class="feature-head" type="button" aria-expanded="true"><span class="feature-number">01</span><span class="feature-icon">♫</span><span class="feature-title">Streaming sin anuncios</span><span class="feature-toggle" aria-hidden="true"></span></button>
+          <div class="feature-body"><div class="feature-body-inner"><p>Reproducción directa con Media3 y el extractor de NewPipe: sin interrupciones y con cola completa, aleatorio y crossfade.</p><div class="feature-shot"><img src="assets/screenshots/04-reproductor.png" alt="Reproductor de PoPMusic" loading="lazy"></div></div></div>
+        </article>
+        <article class="feature-item reveal">
+          <button class="feature-head" type="button" aria-expanded="false"><span class="feature-number">02</span><span class="feature-icon">文</span><span class="feature-title">Letras sincronizadas</span><span class="feature-toggle" aria-hidden="true"></span></button>
+          <div class="feature-body"><div class="feature-body-inner"><p>Letras en tiempo real con la línea activa resaltada, cuatro estilos de letra y la ficha del artista al alcance.</p><div class="feature-shot"><img src="assets/screenshots/05-letras.png" alt="Letras sincronizadas" loading="lazy"></div></div></div>
+        </article>
+        <article class="feature-item reveal">
+          <button class="feature-head" type="button" aria-expanded="false"><span class="feature-number">03</span><span class="feature-icon">↓</span><span class="feature-title">Descargas offline</span><span class="feature-toggle" aria-hidden="true"></span></button>
+          <div class="feature-body"><div class="feature-body-inner"><p>Descarga tus canciones y escúchalas sin datos: funciona en modo avión y se administra desde Ajustes.</p><div class="feature-shot"><img src="assets/screenshots/08-descargas.png" alt="Descargas de PoPMusic" loading="lazy"></div></div></div>
+        </article>
+        <article class="feature-item reveal">
+          <button class="feature-head" type="button" aria-expanded="false"><span class="feature-number">04</span><span class="feature-icon">◎</span><span class="feature-title">Salas “Todos controlan”</span><span class="feature-toggle" aria-hidden="true"></span></button>
+          <div class="feature-body"><div class="feature-body-inner"><p>Crea una sala, comparte el código y cualquiera puede pausar, saltar o añadir canciones a la cola compartida.</p><div class="feature-shot"><img src="assets/screenshots/06-salas.png" alt="Salas de PoPMusic" loading="lazy"></div></div></div>
+        </article>
+        <article class="feature-item reveal">
+          <button class="feature-head" type="button" aria-expanded="false"><span class="feature-number">05</span><span class="feature-icon">↗</span><span class="feature-title">Tendencias del mundo</span><span class="feature-toggle" aria-hidden="true"></span></button>
+          <div class="feature-body"><div class="feature-body-inner"><p>Top 50 mundial y de tu país al día, más reconocimiento de música y chips de ánimo para descubrir.</p><div class="feature-shot"><img src="assets/screenshots/02-buscar.png" alt="Buscar y tendencias" loading="lazy"></div></div></div>
+        </article>
+        <article class="feature-item reveal">
+          <button class="feature-head" type="button" aria-expanded="false"><span class="feature-number">06</span><span class="feature-icon">✦</span><span class="feature-title">A tu manera</span><span class="feature-toggle" aria-hidden="true"></span></button>
+          <div class="feature-body"><div class="feature-body-inner"><p>Fondos dinámicos con los colores de la portada, cristal líquido, crossfade, ecualizador y temporizador de sueño.</p><div class="feature-shot"><img src="assets/screenshots/07-ajustes.png" alt="Ajustes de PoPMusic" loading="lazy"></div></div></div>
+        </article>
+        <article class="feature-item reveal">
+          <button class="feature-head" type="button" aria-expanded="false"><span class="feature-number">07</span><span class="feature-icon">＋</span><span class="feature-title">Importa tus playlists</span><span class="feature-toggle" aria-hidden="true"></span></button>
+          <div class="feature-body"><div class="feature-body-inner"><p>Pega un enlace de YouTube o Spotify y trae tus listas completas a tu biblioteca en segundos.</p><div class="feature-shot"><img src="assets/screenshots/09-importar.png" alt="Importar playlists" loading="lazy"></div></div></div>
+        </article>
+        <article class="feature-item reveal">
+          <button class="feature-head" type="button" aria-expanded="false"><span class="feature-number">08</span><span class="feature-icon">⇄</span><span class="feature-title">Sincroniza tus cuentas</span><span class="feature-toggle" aria-hidden="true"></span></button>
+          <div class="feature-body"><div class="feature-body-inner"><p>Vincula YouTube o Spotify: importa playlists, sube tus listas y elige qué se sincroniza en cada una.</p><div class="feature-shot"><img src="assets/screenshots/10-sincronizacion.png" alt="Sincronización con cuentas" loading="lazy"></div></div></div>
+        </article>
+        <article class="feature-item reveal">
+          <button class="feature-head" type="button" aria-expanded="false"><span class="feature-number">09</span><span class="feature-icon">♡</span><span class="feature-title">Gustos y recomendaciones</span><span class="feature-toggle" aria-hidden="true"></span></button>
+          <div class="feature-body"><div class="feature-body-inner"><p>Elige tus géneros y artistas favoritos para que el inicio y las sugerencias se adapten a ti.</p><div class="feature-shot"><img src="assets/screenshots/12-gustos.png" alt="Gustos musicales" loading="lazy"></div></div></div>
+        </article>
+        <article class="feature-item reveal">
+          <button class="feature-head" type="button" aria-expanded="false"><span class="feature-number">10</span><span class="feature-icon">☺</span><span class="feature-title">Tu perfil y estadísticas</span><span class="feature-toggle" aria-hidden="true"></span></button>
+          <div class="feature-body"><div class="feature-body-inner"><p>Inicia sesión con Google y consulta tus playlists, favoritos, descargas y actividad desde tu cuenta.</p><div class="feature-shot"><img src="assets/screenshots/11-cuenta.png" alt="Cuenta de PoPMusic" loading="lazy"></div></div></div>
+        </article>
       </div>
     </section>
 
     <!-- ============ CIFRAS ============ -->
     <section class="stats-band">
-      <div class="stat reveal"><b class="stat-number" data-count="13">0</b><span>capturas reales</span></div>
-      <div class="stat reveal" data-delay="60"><b class="stat-number" data-count="0">0</b><span>anuncios, siempre</span></div>
+      <div class="stat reveal"><b class="stat-number" data-count="0">0</b><span>anuncios, siempre</span></div>
       <div class="stat reveal" data-delay="120"><b class="stat-number" data-count="15" data-prefix="Android ">0</b><span>o superior</span></div>
       <div class="stat reveal" data-delay="180"><b class="stat-number" data-count="18" data-suffix=",9 MB">0</b><span>archivo APK</span></div>
       <div class="stat reveal" data-delay="240"><b class="stat-number" data-count="100" data-suffix="%">0</b><span>gratis y sin rastreo</span></div>
@@ -240,7 +266,7 @@
       </div>
       <div class="footer-column"><h4>EXPLORA</h4><a href="#about">La aplicación</a><a href="#screens">Capturas</a><a href="#features">Características</a><a href="#download">Descargar</a></div>
       <div class="footer-column"><h4>DESCARGA</h4><a href="downloads/PoPMusic-v0.1.0.apk" download="PoPMusic-v0.1.0.apk">APK v0.1.0</a><a href="https://github.com/4lexzx/PoPMusic/releases/latest" target="_blank" rel="noopener">GitHub Releases</a><a href="#download">Requisitos</a></div>
-      <div class="footer-column"><h4>POP MUSIC</h4><a href="https://github.com/4lexzx/PoPMusic" target="_blank" rel="noopener">Repositorio</a><a href="https://4lexzx.github.io/PoPMusic/privacidad.html" target="_blank" rel="noopener">Privacidad</a><a href="https://4lexzx.github.io/PoPMusic/terminos.html" target="_blank" rel="noopener">Términos</a><a href="mailto:solisumboalexander@hotmail.com">Contacto</a></div>
+      <div class="footer-column pop-column"><h4>POP MUSIC</h4><a href="https://github.com/4lexzx/PoPMusic" target="_blank" rel="noopener">Repositorio</a><a href="https://4lexzx.github.io/PoPMusic/privacidad.html" target="_blank" rel="noopener">Privacidad</a><a href="https://4lexzx.github.io/PoPMusic/terminos.html" target="_blank" rel="noopener">Términos</a><a href="mailto:solisumboalexander@hotmail.com">Contacto</a></div>
       <div class="device-outline"><div class="device-laptop"></div><div class="device-tablet"></div><div class="device-mobile"></div><span>MADE FOR YOUR MUSIC</span></div>
     </div>
     <div class="footer-bottom"><span>© 2026 PoPMusic. Todos los derechos reservados.</span><div><a href="https://4lexzx.github.io/PoPMusic/privacidad.html" target="_blank" rel="noopener">Privacidad</a><a href="https://4lexzx.github.io/PoPMusic/terminos.html" target="_blank" rel="noopener">Términos</a><a href="#home">Volver arriba ↑</a></div></div>
@@ -248,6 +274,6 @@
 
   <div class="download-toast" role="status" aria-live="polite"><b>Descargando PoPMusic</b><span>PoPMusic-v0.1.0.apk · 18,9 MB</span></div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

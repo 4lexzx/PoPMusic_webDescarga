@@ -5,8 +5,8 @@ Landing page oscura para presentar y distribuir **PoPMusic para Android**. No re
 ## Qué incluye
 
 - **Hero** con tres capturas reales de la app dentro de marcos de celular, con flotación y parallax.
-- **Galería de 13 capturas reales** (`assets/screenshots/`): Inicio, Buscar, Biblioteca, Reproductor, Letras, Salas, Ajustes, Descargas, Importar playlists, Cuentas de música, Cuenta, Gustos y Sync de playlists. Se puede recorrer con flechas, arrastrando, con los puntos o con scroll/táctil. Reproductor y Letras se tomaron sin barra de estado.
-- **Info real del proyecto** (Kotlin + Jetpack Compose, sin anuncios, letras sincronizadas, descargas offline, salas en vivo, tendencias, importación y sincronización de playlists). Cada característica lleva su miniatura; el bloque "Conoce PoPMusic" incluye el logo oficial. Cifras animadas (13 capturas, 0 anuncios, Android 15+, 18,9 MB).
+- **Galería de 13 capturas reales** (`assets/screenshots/`): Inicio, Buscar, Biblioteca, Reproductor, Letras, Salas, Ajustes, Descargas, Importar playlists, Cuentas de música, Cuenta, Gustos y Sync de playlists. Se puede recorrer con flechas, arrastrando, con los puntos o con scroll/táctil. Reproductor y Letras se tomaron sin barra de estado; en Ajustes se pixelaron la foto y el correo de la cuenta.
+- **Info real del proyecto** (Kotlin + Jetpack Compose, sin anuncios, letras sincronizadas, descargas offline, salas en vivo, tendencias, importación y sincronización de playlists). Las 10 características son **tarjetas desplegables** con su miniatura; el bloque "Conoce PoPMusic" muestra el logo oficial junto al título, sin marco. Cifras animadas (0 anuncios, Android 15+, 18,9 MB, 100 % gratis).
 - **Descarga funcional**: `downloads/PoPMusic-v0.1.0.apk` es la APK firmada de release (18 922 529 bytes, v0.1.0). Todos los enlaces con `download` apuntan a ese archivo.
 - **Botón a GitHub**: https://github.com/4lexzx/PoPMusic (y el release directo en https://github.com/4lexzx/PoPMusic/releases/latest).
 - **Animaciones**: aparición al hacer scroll, contadores, barra de progreso, ecualizador, shine del botón, toast al descargar. Respetan `prefers-reduced-motion`.

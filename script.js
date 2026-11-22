@@ -186,6 +186,16 @@
     sync();
   }
 
+  /* ---------- características desplegables ---------- */
+  document.querySelectorAll(".feature-head").forEach((head) => {
+    head.addEventListener("click", () => {
+      const item = head.closest(".feature-item");
+      if (!item) return;
+      const open = item.classList.toggle("open");
+      head.setAttribute("aria-expanded", String(open));
+    });
+  });
+
   /* ---------- contadores de cifras ---------- */
   const counters = document.querySelectorAll(".stat-number");
   const animateCounter = (el) => {
