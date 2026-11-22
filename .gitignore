@@ -1,4 +1,4 @@
 node_modules/
 .DS_Store
 .env
-*.apk
+# La APK sí se publica: es el archivo de descarga de la web
