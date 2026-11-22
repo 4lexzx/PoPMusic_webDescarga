@@ -21,7 +21,7 @@ script.js                       Menú, reveal, parallax, galería, contadores, t
 assets/
   popmusic-logo-original.png    Logo oficial (sin modificar)
   popmusic-logo.png             Logo alternativo
-  screenshots/                  6 capturas reales optimizadas (540 px)
+  screenshots/                  13 capturas reales optimizadas (540 px)
 downloads/
   PoPMusic-v0.1.0.apk           APK firmada lista para descargar
 ```
