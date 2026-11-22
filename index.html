@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"><i></i></div>
@@ -170,7 +170,14 @@
         <h2>Menos complicaciones.<br><span>Más música.</span></h2>
         <p>Todo lo que hace especial a PoPMusic, disponible desde la primera vez que la abres.</p>
       </div>
-      <div class="feature-list">
+      <div class="feature-master reveal">
+        <button class="feature-master-head" type="button" aria-expanded="false">
+          <span class="feature-master-icon">✦</span>
+          <span class="feature-master-copy"><b>Todo lo que hace PoPMusic</b><small>10 funciones · toca para explorar</small></span>
+          <span class="feature-master-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="feature-master-body">
+          <div class="feature-list">
         <article class="feature-item open reveal">
           <button class="feature-head" type="button" aria-expanded="true"><span class="feature-number">01</span><span class="feature-icon">♫</span><span class="feature-title">Streaming sin anuncios</span><span class="feature-toggle" aria-hidden="true"></span></button>
           <div class="feature-body"><div class="feature-body-inner"><p>Reproducción directa con Media3 y el extractor de NewPipe: sin interrupciones y con cola completa, aleatorio y crossfade.</p><div class="feature-shot"><img src="assets/screenshots/04-reproductor.png" alt="Reproductor de PoPMusic" loading="lazy"></div></div></div>
@@ -211,6 +218,8 @@
           <button class="feature-head" type="button" aria-expanded="false"><span class="feature-number">10</span><span class="feature-icon">☺</span><span class="feature-title">Tu perfil y estadísticas</span><span class="feature-toggle" aria-hidden="true"></span></button>
           <div class="feature-body"><div class="feature-body-inner"><p>Inicia sesión con Google y consulta tus playlists, favoritos, descargas y actividad desde tu cuenta.</p><div class="feature-shot"><img src="assets/screenshots/11-cuenta.png" alt="Cuenta de PoPMusic" loading="lazy"></div></div></div>
         </article>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -263,17 +272,18 @@
           <a href="https://github.com/4lexzx/PoPMusic" target="_blank" rel="noopener" aria-label="GitHub">GitHub ↗</a>
           <a href="mailto:solisumboalexander@hotmail.com" aria-label="Correo">Contacto</a>
         </div>
+        <p class="creator-credit">Creado por <a href="https://github.com/4lexzx" target="_blank" rel="noopener">@4lexzx</a> · GitHub</p>
       </div>
       <div class="footer-column"><h4>EXPLORA</h4><a href="#about">La aplicación</a><a href="#screens">Capturas</a><a href="#features">Características</a><a href="#download">Descargar</a></div>
       <div class="footer-column"><h4>DESCARGA</h4><a href="downloads/PoPMusic-v0.1.0.apk" download="PoPMusic-v0.1.0.apk">APK v0.1.0</a><a href="https://github.com/4lexzx/PoPMusic/releases/latest" target="_blank" rel="noopener">GitHub Releases</a><a href="#download">Requisitos</a></div>
       <div class="footer-column pop-column"><h4>POP MUSIC</h4><a href="https://github.com/4lexzx/PoPMusic" target="_blank" rel="noopener">Repositorio</a><a href="https://4lexzx.github.io/PoPMusic/privacidad.html" target="_blank" rel="noopener">Privacidad</a><a href="https://4lexzx.github.io/PoPMusic/terminos.html" target="_blank" rel="noopener">Términos</a><a href="mailto:solisumboalexander@hotmail.com">Contacto</a></div>
       <div class="device-outline"><div class="device-laptop"></div><div class="device-tablet"></div><div class="device-mobile"></div><span>MADE FOR YOUR MUSIC</span></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 PoPMusic. Todos los derechos reservados.</span><div><a href="https://4lexzx.github.io/PoPMusic/privacidad.html" target="_blank" rel="noopener">Privacidad</a><a href="https://4lexzx.github.io/PoPMusic/terminos.html" target="_blank" rel="noopener">Términos</a><a href="#home">Volver arriba ↑</a></div></div>
+    <div class="footer-bottom"><span>© 2026 PoPMusic · Creado por <a href="https://github.com/4lexzx" target="_blank" rel="noopener">@4lexzx</a> · Todos los derechos reservados.</span><div><a href="https://4lexzx.github.io/PoPMusic/privacidad.html" target="_blank" rel="noopener">Privacidad</a><a href="https://4lexzx.github.io/PoPMusic/terminos.html" target="_blank" rel="noopener">Términos</a><a href="#home">Volver arriba ↑</a></div></div>
   </footer>
 
   <div class="download-toast" role="status" aria-live="polite"><b>Descargando PoPMusic</b><span>PoPMusic-v0.1.0.apk · 18,9 MB</span></div>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>

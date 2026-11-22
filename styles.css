@@ -337,6 +337,32 @@
   .footer-bottom{margin-top:10px;gap:12px}
 }
 
+/* crédito del creador */
+.creator-credit{margin-top:10px !important;font-size:10px;color:#777b84}
+.creator-credit a{color:#8ce2e9;font-weight:600}
+.footer-bottom a{color:#8ce2e9}
+
+/* botón maestro: todas las características dentro */
+.feature-master{border:1px solid #26262b;border-radius:18px;background:#0d0d0f;overflow:hidden}
+.feature-master-head{width:100%;display:flex;align-items:center;gap:16px;padding:20px 24px;background:none;border:0;color:inherit;text-align:left;cursor:pointer;font-family:inherit;transition:background .3s ease}
+.feature-master-head:hover{background:#ffffff05}
+.feature-master-icon{width:44px;height:44px;flex:0 0 auto;border-radius:12px;background:#8ce2e91a;border:1px solid #8ce2e944;display:grid;place-items:center;color:#8ce2e9;font-size:20px}
+.feature-master-copy b{display:block;font:700 15px Manrope,sans-serif;color:#f6f6f6}
+.feature-master-copy small{display:block;margin-top:4px;font-size:11px;color:#85858b}
+.feature-master-toggle{margin-left:auto;width:30px;height:30px;flex:0 0 auto;border:1px solid #2b2b31;border-radius:50%;display:grid;place-items:center;color:#8ce2e9;transition:all .3s ease}
+.feature-master-toggle::before{content:"+";position:relative;top:-1px}
+.feature-master.open .feature-master-toggle{background:#8ce2e9;color:#071116;border-color:#8ce2e9;transform:rotate(180deg)}
+.feature-master.open .feature-master-toggle::before{content:"−"}
+.feature-master-body{max-height:0;overflow:hidden;opacity:0;transition:max-height .7s cubic-bezier(.22,.61,.36,1),opacity .4s ease}
+.feature-master.open .feature-master-body{max-height:4000px;opacity:1}
+.feature-master .feature-list{border-top:1px solid #202024;padding:6px 22px 16px}
+@media(max-width:560px){
+  .feature-master-head{padding:18px 16px;gap:12px}
+  .feature-master-icon{width:38px;height:38px;font-size:17px}
+  .feature-master-copy b{font-size:13px}
+  .feature-master .feature-list{padding:8px 12px 12px}
+}
+
 @media(max-width:360px){
   .hero-art{height:305px}
   .hero-art .phone-shot{width:114px;height:234px;margin:-117px 0 0 -57px}

@@ -186,6 +186,15 @@
     sync();
   }
 
+  /* ---------- botón maestro de características ---------- */
+  const featureMaster = document.querySelector(".feature-master");
+  const masterHead = featureMaster?.querySelector(".feature-master-head");
+  masterHead?.addEventListener("click", () => {
+    if (!featureMaster) return;
+    const open = featureMaster.classList.toggle("open");
+    masterHead.setAttribute("aria-expanded", String(open));
+  });
+
   /* ---------- características desplegables ---------- */
   document.querySelectorAll(".feature-head").forEach((head) => {
     head.addEventListener("click", () => {
