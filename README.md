@@ -7,7 +7,7 @@ Landing page oscura para presentar y distribuir **PoPMusic para Android**. No re
 - **Hero** con tres capturas reales de la app dentro de marcos de celular, con flotación y parallax.
 - **Galería de 13 capturas reales** (`assets/screenshots/`): Inicio, Buscar, Biblioteca, Reproductor, Letras, Salas, Ajustes, Descargas, Importar playlists, Cuentas de música, Cuenta, Gustos y Sync de playlists. Se puede recorrer con flechas, arrastrando, con los puntos o con scroll/táctil. Reproductor y Letras se tomaron sin barra de estado; en Ajustes y Cuenta se pixelaron la foto, el usuario y el correo.
 - **Info real del proyecto** (Kotlin + Jetpack Compose, sin anuncios, letras sincronizadas, descargas offline, salas en vivo, tendencias, importación y sincronización de playlists). En móvil las 10 características viven dentro de **un botón desplegable maestro** con sub-botones por función y su miniatura; en escritorio están **todas visibles** como en la versión original. El bloque "Conoce PoPMusic" muestra el logo oficial junto al título, sin marco. El footer acredita al creador: **@4lexzx**. Cifras animadas (0 anuncios, Android 15+, 18,9 MB, 100 % gratis).
-- **Descarga funcional**: `downloads/PoPMusic-v0.1.0.apk` es la APK firmada de release (18 922 529 bytes, v0.1.0). Todos los enlaces con `download` apuntan a ese archivo. `vercel.json` sirve la APK con `Content-Disposition: attachment` y `X-Content-Type-Options: nosniff`, y la web muestra su SHA-256 para verificación.
+- **Descarga siempre actualizada**: todos los botones apuntan a `/api/download` (`api/download.js`), que consulta la API de GitHub y **redirige al APK de la última release** de `4lexzx/PoPMusic`. Si GitHub falla, usa `downloads/PoPMusic-v0.1.0.apk` como respaldo. `vercel.json` sirve la APK con `Content-Disposition: attachment` y `X-Content-Type-Options: nosniff`. En preview local (`localhost` / `file:`) el script usa la APK incluida porque no hay funciones serverless.
 
 > Nota: los avisos del navegador/Play Protect al descargar o instalar APKs fuera de Google Play son una protección del sistema, no algo que el sitio pueda desactivar. Se mitiga con HTTPS, cabeceras correctas, firma y huella publicada; la única forma de eliminarlos por completo es publicar en Google Play.
 - **Botón a GitHub**: https://github.com/4lexzx/PoPMusic (y el release directo en https://github.com/4lexzx/PoPMusic/releases/latest).
@@ -49,11 +49,11 @@ git add . && git commit -m "cambios" && git push
 npx vercel --prod --yes
 ```
 
-La carpeta ya está vinculada al proyecto de Vercel (`prj_ZJuNOoikfAGf8ZT7tr5RGOI8u9oJ`). El proyecto está en GitHub Pages/Vercel como sitio estático: la APK y las capturas se sirven desde el propio deploy (verificado: `downloads/PoPMusic-v0.1.0.apk` responde 200 con 18 922 529 bytes).
+La carpeta ya está vinculada al proyecto de Vercel (`prj_ZJuNOoikfAGf8ZT7tr5RGOI8u9oJ`). La APK se sirve de forma dinámica mediante la función `api/download.js`; `downloads/PoPMusic-v0.1.0.apk` queda solo como respaldo (verificado: responde 200 con 18 922 529 bytes).
 
 ## Actualizar la APK
 
-Copia el nuevo `app-release.apk` a `downloads/PoPMusic-v0.1.0.apk` (o cambia el nombre en los `href` de `index.html`, hay varios: nav, hero, sección de descarga y footer) y actualiza la versión, el tamaño y las cifras visibles.
+**No hace falta tocar esta web.** Publica la nueva APK como asset en un release de https://github.com/4lexzx/PoPMusic/releases: `/api/download` detecta automáticamente el primer `.apk` del release `latest` y redirige allí. Opcionalmente actualiza también la copia de respaldo `downloads/PoPMusic-v0.1.0.apk` y vuelve a desplegar. El texto de la web ya no muestra versión ni tamaño fijos, así que no se queda desactualizado.
 
 ## Enlaces del proyecto
 

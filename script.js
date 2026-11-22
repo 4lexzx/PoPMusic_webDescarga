@@ -2,6 +2,14 @@
 (() => {
   "use strict";
 
+  // En preview local (sin funciones de Vercel) se usa la APK incluida
+  if (location.protocol === "file:" || ["localhost", "127.0.0.1"].includes(location.hostname)) {
+    document.querySelectorAll('a[href="/api/download"]').forEach((a) => {
+      a.href = "downloads/PoPMusic-v0.1.0.apk";
+      a.setAttribute("download", "PoPMusic-v0.1.0.apk");
+    });
+  }
+
   /* ---------- menú móvil ---------- */
   const menuButton = document.querySelector(".menu-toggle");
   const navigation = document.querySelector("#navigation");
