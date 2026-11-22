@@ -35,9 +35,19 @@ python -m http.server 8099
 
 También funciona abriendo `index.html` directamente en el navegador.
 
-## Publicar en GitHub Pages
+## Publicado
 
-Sube esta carpeta al repo (por ejemplo dentro de `docs/`) y activa Pages desde la rama principal. La APK y las capturas son archivos estáticos: se descargan sin servicios externos.
+- **Web (Vercel):** https://popmusic-webdescarga.vercel.app
+- **Repositorio:** https://github.com/4lexzx/PoPMusic_webDescarga
+
+Para volver a desplegar tras un cambio:
+
+```bash
+git add . && git commit -m "cambios" && git push
+npx vercel --prod --yes
+```
+
+La carpeta ya está vinculada al proyecto de Vercel (`prj_ZJuNOoikfAGf8ZT7tr5RGOI8u9oJ`). El proyecto está en GitHub Pages/Vercel como sitio estático: la APK y las capturas se sirven desde el propio deploy (verificado: `downloads/PoPMusic-v0.1.0.apk` responde 200 con 18 922 529 bytes).
 
 ## Actualizar la APK
 
