@@ -1,0 +1,65 @@
+name: Sync APK desde el ultimo release
+
+# La copia local (usada solo si GitHub falla) se mantiene igual que el boton de descarga.
+# Cada 30 min, o manualmente, descarga el APK del release "latest" de PoPMusic,
+# compara su SHA-256 con la copia del repositorio y hace commit si cambio.
+# Vercel esta conectado a main, asi que el push dispara el deploy automatico.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Comparar y actualizar APK
+        id: apk
+        shell: bash
+        run: |
+          set -euo pipefail
+          api="https://api.github.com/repos/4lexzx/PoPMusic/releases/latest"
+          json=$(curl -fsSL -H "Accept: application/vnd.github+json" -H "User-Agent: popmusic-apk-sync" "$api")
+          tag=$(printf '%s' "$json" | jq -r '.tag_name')
+          name=$(printf '%s' "$json" | jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".apk")) | .name][0] // empty')
+          if [ -z "$name" ]; then
+            echo "No hay asset APK en el release $tag"; exit 1
+          fi
+          url=$(printf '%s' "$json" | jq -r --arg n "$name" '[.assets[] | select(.name == $n) | .browser_download_url][0]')
+          curl -fsSL -o /tmp/latest.apk "$url"
+          new_sha=$(sha256sum /tmp/latest.apk | cut -d' ' -f1)
+          old_sha=""
+          if [ -f downloads/PoPMusic-v0.1.0.apk ]; then
+            old_sha=$(sha256sum downloads/PoPMusic-v0.1.0.apk | cut -d' ' -f1)
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "sha=$new_sha" >> "$GITHUB_OUTPUT"
+          if [ "$new_sha" = "$old_sha" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Ya esta actualizado: $tag $new_sha"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            cp /tmp/latest.apk downloads/PoPMusic-v0.1.0.apk
+            echo "APK actualizada a $tag $new_sha"
+          fi
+
+      - name: Commit y push
+        if: steps.apk.outputs.changed == 'true'
+        shell: bash
+        env:
+          TAG: ${{ steps.apk.outputs.tag }}
+          SHA: ${{ steps.apk.outputs.sha }}
+        run: |
+          set -euo pipefail
+          git config user.name "PoPMusic Bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add downloads/PoPMusic-v0.1.0.apk
+          git commit -m "chore: sincronizar APK desde release $TAG ($SHA)"
+          git push
