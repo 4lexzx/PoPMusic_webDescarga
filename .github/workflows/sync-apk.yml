@@ -6,6 +6,8 @@ name: Sync APK desde el ultimo release
 # Vercel esta conectado a main, asi que el push dispara el deploy automatico.
 
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: "*/30 * * * *"
   workflow_dispatch:
@@ -15,6 +17,7 @@ permissions:
 
 jobs:
   sync:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
