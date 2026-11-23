@@ -53,7 +53,12 @@ La carpeta ya está vinculada al proyecto de Vercel (`prj_ZJuNOoikfAGf8ZT7tr5RGO
 
 ## Actualizar la APK
 
-**No hace falta tocar esta web.** Publica la nueva APK como asset en un release de https://github.com/4lexzx/PoPMusic/releases: `/api/download` detecta automáticamente el primer `.apk` del release `latest` y redirige allí. Opcionalmente actualiza también la copia de respaldo `downloads/PoPMusic-v0.1.0.apk` y vuelve a desplegar. El texto de la web ya no muestra versión ni tamaño fijos, así que no se queda desactualizado.
+**No hace falta tocar esta web.** Publica la nueva APK como asset en un release de https://github.com/4lexzx/PoPMusic/releases:
+
+- `/api/download` detecta automáticamente el primer `.apk` del release `latest` y redirige allí (inmediato).
+- `.github/workflows/sync-apk.yml` comprueba cada 30 min (y en cada push a `main`) la SHA-256 de ese asset contra la copia `downloads/PoPMusic-v0.1.0.apk`. Si cambió, reemplaza el archivo y hace commit; como Vercel está conectado a `main`, ese push dispara el deploy automáticamente. El job se salta sus propios commits (`github.actor != github-actions[bot]`) para no entrar en bucle.
+
+El texto de la web ya no muestra versión ni tamaño fijos, así que no se queda desactualizado.
 
 ## Enlaces del proyecto
 
