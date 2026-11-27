@@ -19,5 +19,8 @@
 | `11-cuenta.png` | Perfil con favoritos, playlists y descargas |
 | `12-gustos.png` | Géneros y artistas favoritos |
 | `13-sync-playlist.png` | Sincronización al crear una playlist |
+| `pc-01-inicio.png` | PoPMusic para PC: Inicio (capturada de la app abierta en Windows) |
+| `pc-02-buscar.png` | PoPMusic para PC: búsqueda y géneros |
+| `pc-03-biblioteca.png` | PoPMusic para PC: biblioteca y listas |
 
 Para regenerarlas: activa modo inmersivo (`adb shell settings put global policy_control immersive.full=com.popmusic.app`), abre la app, navega a cada pantalla y usa `adb exec-out screencap -p > archivo.png`. Restaura con `adb shell settings put global policy_control null` y redimensiona a 540 px de ancho.
