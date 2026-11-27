@@ -4,9 +4,14 @@
 
   // En preview local (sin funciones de Vercel) se usa la APK incluida
   if (location.protocol === "file:" || ["localhost", "127.0.0.1"].includes(location.hostname)) {
-    document.querySelectorAll('a[href="/api/download"]').forEach((a) => {
-      a.href = "downloads/PoPMusic-v0.1.0.apk";
-      a.setAttribute("download", "PoPMusic-v0.1.0.apk");
+    document.querySelectorAll('a[href^="/api/download"]').forEach((a) => {
+      if (a.getAttribute("href").includes("platform=windows")) {
+        a.href = "https://github.com/4lexzx/PoPMusic/releases";
+        a.removeAttribute("download");
+      } else {
+        a.href = "downloads/PoPMusic-v0.1.0.apk";
+        a.setAttribute("download", "PoPMusic-v0.1.0.apk");
+      }
     });
   }
 
@@ -253,9 +258,20 @@
   /* ---------- toast de descarga ---------- */
   const toast = document.querySelector(".download-toast");
   let toastTimer = 0;
-  document.querySelectorAll('a[download]').forEach((link) => {
+  document.querySelectorAll('a[download], a.pc-download').forEach((link) => {
     link.addEventListener("click", () => {
       if (!toast) return;
+      const isPc =
+        link.dataset.platform === "windows" ||
+        link.getAttribute("href").includes("platform=windows");
+      const title = toast.querySelector("b");
+      const detail = toast.querySelector("span");
+      if (title)
+        title.textContent = isPc ? "Descargando PoPMusic para PC" : "Descargando PoPMusic";
+      if (detail)
+        detail.textContent = isPc
+          ? "Instalador .exe · última versión"
+          : "APK de la última versión · GitHub Releases";
       toast.classList.add("show");
       clearTimeout(toastTimer);
       toastTimer = setTimeout(() => toast.classList.remove("show"), 4200);

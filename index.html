@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"><i></i></div>
@@ -27,6 +27,7 @@
       <a href="#about">La app</a>
       <a href="#screens">Capturas</a>
       <a href="#features">Características</a>
+      <a href="#pc">Para PC</a>
       <a href="#download">Descarga</a>
       <a class="gh-link" href="https://github.com/4lexzx/PoPMusic" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" width="13" height="13"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg> GitHub <span>↗</span></a>
       <a class="nav-cta" href="/api/download" download="PoPMusic.apk">Descargar APK <span>↓</span></a>
@@ -227,21 +228,64 @@
     <section class="stats-band">
       <div class="stat reveal"><b class="stat-number" data-count="0">0</b><span>anuncios, siempre</span></div>
       <div class="stat reveal" data-delay="120"><b class="stat-number" data-count="15" data-prefix="Android ">0</b><span>o superior</span></div>
-      <div class="stat reveal" data-delay="180"><b class="stat-number" data-count="18" data-suffix=",9 MB">0</b><span>archivo APK</span></div>
+      <div class="stat reveal" data-delay="180"><b class="stat-number" data-count="2">0</b><span>plataformas</span></div>
       <div class="stat reveal" data-delay="240"><b class="stat-number" data-count="100" data-suffix="%">0</b><span>gratis y sin rastreo</span></div>
+    </section>
+
+    <!-- ============ VERSIÓN PC ============ -->
+    <section class="pc-section" id="pc">
+      <div class="pc-glow" aria-hidden="true"></div>
+      <div class="section-topline reveal"><span>04 / POPMUSIC EN TU PC</span><span>WINDOWS 10 · 11</span></div>
+
+      <div class="pc-head">
+        <div class="pc-head-copy reveal">
+          <div class="eyebrow"><span class="live-dot"></span> LA MISMA MÚSICA, MÁS ESPACIO</div>
+          <h2>Tu música también<br><span>en pantalla grande.</span></h2>
+          <p>PoPMusic para Windows: reproductor flotante, biblioteca estilo Liner, letras palabra por palabra y recomendaciones infinitas. Todo lo que ya te gusta del celular, en tu escritorio.</p>
+          <div class="pc-actions">
+            <a class="primary-button download-button pc-download" data-platform="windows" href="/api/download?platform=windows" download="PoPMusic-PC-Setup.exe">Descargar para Windows <span>↓</span></a>
+            <p class="pc-note">Instalador .exe <b>·</b> se actualiza con cada release</p>
+          </div>
+        </div>
+
+        <div class="pc-window pc-window-hero reveal" data-delay="120">
+          <div class="pc-window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-title">PoP Music</span><span class="window-tools">— &nbsp; □ &nbsp; ×</span></div>
+          <img src="assets/screenshots/pc-01-album.png" alt="PoPMusic en PC: vista de álbum" loading="lazy" width="900" height="585">
+        </div>
+      </div>
+
+      <div class="pc-cards reveal" data-delay="160">
+        <figure class="pc-card">
+          <div class="pc-window pc-window-small">
+            <div class="pc-window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-title">PoP Music</span><span class="window-tools">— &nbsp; □ &nbsp; ×</span></div>
+            <img src="assets/screenshots/pc-02-library.png" alt="Biblioteca de PoPMusic en PC" loading="lazy" width="900" height="585">
+          </div>
+          <figcaption><b>Biblioteca estilo Liner</b><span>Canciones, álbumes, artistas y favoritos en una vista amplia y limpia.</span></figcaption>
+        </figure>
+        <figure class="pc-card">
+          <div class="pc-window pc-window-small">
+            <div class="pc-window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-title">PoP Music</span><span class="window-tools">— &nbsp; □ &nbsp; ×</span></div>
+            <img src="assets/screenshots/pc-03-lyrics.png" alt="Letras sincronizadas de PoPMusic en PC" loading="lazy" width="900" height="585">
+          </div>
+          <figcaption><b>Letras palabra por palabra</b><span>Sigue cada canción con la letra sincronizada y el fondo reactivo.</span></figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- ============ DESCARGA ============ -->
     <section class="download-section" id="download">
       <div class="download-backdrop"></div>
       <div class="download-content reveal">
-        <div class="eyebrow">04 / EMPIEZA A ESCUCHAR</div>
+        <div class="eyebrow">05 / EMPIEZA A ESCUCHAR</div>
         <h2>La música te<br>está esperando.</h2>
-        <p>Descarga la APK oficial de PoPMusic para Android. Archivo firmado, sin tiendas de por medio: tocas y se instala.</p>
+        <p>Descarga PoPMusic para Android o para Windows. Ambas versiones se actualizan solas con cada release publicado.</p>
 
         <div class="download-actions">
           <a class="primary-button download-button" href="/api/download" download="PoPMusic.apk">
             Descargar APK <span>↓</span>
+          </a>
+          <a class="github-button pc-download" data-platform="windows" href="/api/download?platform=windows" download="PoPMusic-PC-Setup.exe">
+            Descargar para PC <span>↓</span>
           </a>
           <a class="github-button" href="https://github.com/4lexzx/PoPMusic" target="_blank" rel="noopener">
             <svg viewBox="0 0 16 16" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
@@ -276,7 +320,7 @@
         <p class="creator-credit">Creado por <a href="https://github.com/4lexzx" target="_blank" rel="noopener">@4lexzx</a> · GitHub</p>
       </div>
       <div class="footer-column"><h4>EXPLORA</h4><a href="#about">La aplicación</a><a href="#screens">Capturas</a><a href="#features">Características</a><a href="#download">Descargar</a></div>
-      <div class="footer-column"><h4>DESCARGA</h4><a href="/api/download" download="PoPMusic.apk">Última APK</a><a href="https://github.com/4lexzx/PoPMusic/releases/latest" target="_blank" rel="noopener">GitHub Releases</a><a href="#download">Requisitos</a></div>
+      <div class="footer-column"><h4>DESCARGA</h4><a href="/api/download" download="PoPMusic.apk">APK para Android</a><a href="/api/download?platform=windows" class="pc-download" data-platform="windows" download="PoPMusic-PC-Setup.exe">Instalador para PC</a><a href="https://github.com/4lexzx/PoPMusic/releases/latest" target="_blank" rel="noopener">GitHub Releases</a><a href="#download">Requisitos</a></div>
       <div class="footer-column pop-column"><h4>POP MUSIC</h4><a href="https://github.com/4lexzx/PoPMusic" target="_blank" rel="noopener">Repositorio</a><a href="https://4lexzx.github.io/PoPMusic/privacidad.html" target="_blank" rel="noopener">Privacidad</a><a href="https://4lexzx.github.io/PoPMusic/terminos.html" target="_blank" rel="noopener">Términos</a><a href="mailto:solisumboalexander@hotmail.com">Contacto</a></div>
       <div class="device-outline"><div class="device-laptop"></div><div class="device-tablet"></div><div class="device-mobile"></div><span>MADE FOR YOUR MUSIC</span></div>
     </div>
@@ -285,6 +329,6 @@
 
   <div class="download-toast" role="status" aria-live="polite"><b>Descargando PoPMusic</b><span>APK de la última versión · GitHub Releases</span></div>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
