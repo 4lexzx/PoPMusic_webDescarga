@@ -22,5 +22,6 @@
 | `pc-01-inicio.png` | PoPMusic para PC: Inicio (capturada de la app abierta en Windows) |
 | `pc-02-buscar.png` | PoPMusic para PC: búsqueda y géneros |
 | `pc-03-biblioteca.png` | PoPMusic para PC: biblioteca y listas |
+| `pc-04-lyrics.png` | PoPMusic para PC: letras sincronizadas (modo karaoke) |
 
 Para regenerarlas: activa modo inmersivo (`adb shell settings put global policy_control immersive.full=com.popmusic.app`), abre la app, navega a cada pantalla y usa `adb exec-out screencap -p > archivo.png`. Restaura con `adb shell settings put global policy_control null` y redimensiona a 540 px de ancho.
